@@ -1,244 +1,286 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title></title>
-        <style type="text/css"> 
-		a{TEXT-DECORATION:none}
-<!--
-body,td,th {
-    font-family: Arial, Helvetica, sans-serif;
-    color: #ffffff;
-}
-
-body {
-    text-align: center;
-    background-color: skyblue;
-    background-image: linear-gradient(0deg, #0a6bcc, #45b0e5);
-}
-
-.article-text {
-    width: 400px;
-    text-align: center;
-    margin: 0px auto 10px;
-    color: #FFF;
-}
-
-.article-name {
-    width: 400px;
-    text-align: center;
-    color: #6800b3;
-    font-weight: bold;
-}
-
-.article-image {
-    margin: 2px 2px 2px 2px;
-}
-
-.article-image img {
-    width: 400px;
-}
-
-.article-image-big {
-    margin: 2px 2px 2px 2px;
-}
-
-.article-image-big img {
-    width: 1200px;
-}
-
-.article-badge img {
-    height: 50px;
-}
-
-.article-badge {
-    margin: 15px 2px 15px 2px;
-    text-align: center;
-}
-
-.article-title {
-    width: 400px;
-    text-align: left;
-    margin:0px auto 10px;
-    font-size: 25px;
-    font-weight: bold;
-    color: #4fa0f3;
-}
-
-.article {
-    width: 404px;
-    text-align: left;
-    margin:0px auto 40px;
-    padding: 0px 0px 0px 0px;
-    border-width: 1px 1px 1px 1px;
-    border-color: #e2e2e2;
-    border-style: solid;
-    background-color: white;
-    box-shadow: 0px 0px 4px 1px #55555555;
-}
-
-.article-big {
-    width: 1204px;
-    text-align: left;
-    margin:0px auto 40px;
-    padding: 0px 0px 0px 0px;
-    border-width: 1px 1px 1px 1px;
-    border-color: #ffffff;
-    border-style: solid;
-    background-color: white;
-}
-
-.article-text a {
-    color: #ffffff;
-}
-
-.article-text b {
-    width: 400px;
-    text-align: left;
-    margin: 0px auto 10px;
-    font-size: 20px;
-    font-weight: bold;
-    color: #FFFFFF;
-}
--->
-        </style>
-        <meta name="viewport" content="width=device-width, initial-scale=0.8, minimum-scale=0.8, maximum-scale=0.8, user-scalable=no">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
-        <script src="lazyelem.min.js" type="text/javascript"></script>
-        <script>
-            $(function(){
-                 lazyelem.listen();
-            });
-        </script>
-       
-      <link rel="shortcut icon" href="icon.ico" />
-      <link rel="bookmark" href="icon.ico" />
+        <meta charset="UTF-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Tony Luo - CV</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Source+Sans+Pro|Nunito+Sans|Titillium+Web">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+        <link rel="stylesheet" href="awesome.css">
     </head>
-
-<body>
-
-<div>
-  <p><img src="images/logo.png"/><br>
-            <br />
-            <font size="6" id="name"></font><br><br>
-    
-</div>
-        <div class="fb-like"  data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
-<p><br>
-</p>
-
-<div class="target">
-  
-<div class="article">
- <div class="article-name">
-   <p><font key="name"></font></p>
- </div>
-  <div class="article-image"><a key="iosid" href="" target="_blank"><img key="img" lazy-src="" 
-  data-original="/images/loading.gif"/></a></div>    
-<div class="article-badge"><a key="iosid" href="" target="_blank">
-<img key="down" src="" data-original="/images/loading.gif" width="140" height="50" /></a></div>
-</div>
-
- </div>
-        
-<!-- app end -->
-        <p><span class="article-image"><a id="privacy" href="/privacy-policy-zh.html" target="_blank" class="article-text"></a><a id="huangyunkun" href="http://www.huangyunkun.com" target="_blank" class="article-text"></a><a id="i7play" href="http://www.i7play.com" target="_blank" class="article-text"></a><a id="language" href="javascript:changeLanguage()" class="article-text"></a></span></p>
-        <div class="article-text"><span class="article-text">@ 2010-2019 FeiYing Studio all rights reserved.</span><br>
-        <br><a id="viewgame" href="https://itunes.apple.com/developer/id351050067" target="_blank"></a></div>
-
-<script type="text/javascript" src="data.js"></script>
-<script>
-			var language = (navigator.language || navigator.browserLanguage).toLowerCase();
-			var isEnglish=language.indexOf('zh')<0;
-			
-			function change(){
-				if(isEnglish){
-				    $(document).attr("title","FeiYing Studio Free iphone Games");
-				    document.getElementById("name").innerText="FeiYing Studio";
-				    //document.getElementById("music").innerText="Original Song";
-				    //document.getElementById("language").innerText="中文";
-					document.getElementById("huangyunkun").innerText="";
-					document.getElementById("i7play").innerText="";
-				    document.getElementById("privacy").innerText="Privacy Policy";
-					document.getElementById("privacy").setAttribute('href',"policy.html");
-				    //document.getElementById("viewgame").innerText="Check out all of our amazing games for iPhone and iPad and search for FeiYing Studio in AppStore.";
-				}else{
-					$(document).attr("title","FeiYing Studio免费苹果手机游戏");
-				    document.getElementById("name").innerText="FeiYing Studio";
-				    //document.getElementById("music").innerText="原创歌曲";
-					//document.getElementById("huangyunkun").innerText=" | 夜的孤行灯 | ";
-					document.getElementById("i7play").innerText="爱去玩";
-				    document.getElementById("language").innerText="English";
-				    document.getElementById("privacy").innerText="隐私策略";
-					document.getElementById("privacy").setAttribute('href',"/policy-zh.html");
-				    //document.getElementById("viewgame").innerText="查看我们所有的iPhone和iPad的游戏，在AppStore的搜索字段中搜索FeiYing Studio.";
-				}
-			}
-			
-			change();
-			
-				 var tar=$(".target");
-                 var ite=$(".article");
-                 ite.remove();
-                 ite.hide();
-                 ite.removeClass("hide");
-				 
-				 var items=[];
-				 
-		
-		function change2(isCreate){
-					 for(var i=0;i<ks.length;i++){
-						 var cpy;
-					     if(isCreate){
-						     cpy=ite.clone();
-							 items[i]=cpy;
-						 }else{
-							 cpy=items[i];
-							 }	 
-                     cpy.find("[key]").each(function(){
-                         var that=$(this);
-						 if(that[0].tagName=="A"){
-							 if(isEnglish){
-								   that.attr("href","https://itunes.apple.com/us/app/id"+ks[i][that.attr("key")]);
-								 }else{
-							       that.attr("href","https://itunes.apple.com/cn/app/id"+ks[i][that.attr("key")]);
-								 }
-					     }else if(that[0].tagName=="IMG"){
-							   var key=that.attr("key");
-							   if(key=="down"){
-								   if(isEnglish){
-									    that.attr("src","/images/iosdown_en.png");
-									   }else{
-										   that.attr("src","/images/iosdown.png");
-										   }
-							   }else{
-								   that.attr("lazy-src",ks[i][key]);
-								   }
-                        }else {
-                               that.text(ks[i][that.attr("key")]);
-							   if(isEnglish){
-								   that.text(ks[i][that.attr("key")+"_en"]);
-								 }else{
-							       that.text(ks[i][that.attr("key")]);
-								 }
-                        }
-                     })
-                     cpy.fadeIn();
-					 if(isCreate){
-						 tar.append(cpy);
-						 }
-                       }
-        }
-		
-		change2(true);
-		
-		function changeLanguage(){
-	       isEnglish=!isEnglish;
-		   change();
-		   change2(false);
-        }
-        </script>
-        <!--script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_3642451'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/stat.php%3Fid%3D3642451%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script-->
-    </body>
+    <body>
+        <div class="wrap">
+            <div data-reactroot="" class="app">
+                <header class="header">
+                    <div class="profile">
+                        <!-- <img class="profile-img circle" alt="Tony Luo" src="photo.jpg"> -->
+                        <h1 class="name">
+                            <!-- react-text: 15 -->
+                            Tony Luo
+                            <!-- /react-text -->
+                            <!-- react-text: 6 -->
+                            <!-- /react-text -->
+                        </h1>
+                        <h3 class="position">Fullstack Software Developer</h3>
+                        <!-- <q class="quote">To be a better man</q> -->
+                    </div>
+                    <div class="socials">
+                        <!-- <a class="social homepage" href="" target="_blank" title="posquit0"></a> -->
+                        <!--a class="social github" href="https://github.com/Carter800" target="_blank" title="tony"></a-->
+                        <!-- <a class="social linkedin" href="" target="_blank" title="posquit0"></a> -->
+                    </div>
+                    <ul class="contacts">
+                        <li class="contact email">
+                            <a href="mailto:feiyingxyz@qq.com">feiyingxyz@qq.com</a>
+                        </li>
+                        <!--li class="contact homepage">
+                            <a href="https://feiyingstudio.com">feiyingstudio.com</a>
+                        </li-->
+                        <li class="contact phone">
+                            <a href="">(+86) 18038123871</a>
+                        </li>
+                    </ul>
+                    <div class="sections"></div>
+                </header>
+                <div class="content">
+                    <div class="sections">
+                        <section id="summary" class="section">
+                            <h1 class="section-title">
+                                <em>Summary</em>
+                                <!-- react-text: 28 -->
+                                <!-- /react-text -->
+                            </h1>
+                            <p class="section-description">Currently work as fullstack developer mainly focus on mobile app and front-end development. 10+ years experience specializing in mobile apps, web sites, desktop software development. With rich experience on building, optimizing and publishing mobile apps and web apps across many industries. Loves Vim, OS X and enjoy to customize development environment. Interested in devising a better problem solving method for a challenging task, and learning new technologies and tools if need arises.</p>
+                        </section>
+                        <section id="work-experience" class="section">
+                            <h1 class="section-title">
+                                <em>Work</em>
+                                <!-- react-text: 33 -->
+                                Experience
+                                <!-- /react-text -->
+                            </h1>
+                            <div class="items">
+                                <div class="item item-detail">
+                                    <span class="title">Senior mobile app and frontend developer</span>
+                                    <span class="location">
+                                        <i>Shenzhen, China</i>
+                                    </span>
+                                    <span class="date">
+                                        <small>August. 2021 - Present</small>
+                                    </span>
+                                    <span class="organization">
+                                        <small>Betterlab Studio</small>
+                                    </span>
+                                    <ul class="descriptions">
+                                        <li>
+                                            <span>Developing web3 related mobile app and web system.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="item item-detail">
+                                    <span class="title">Senior mobile app and frontend developer</span>
+                                    <span class="location">
+                                        <i>Shenzhen, China</i>
+                                    </span>
+                                    <span class="date">
+                                        <small>April. 2020 - July. 2021</small>
+                                    </span>
+                                    <span class="organization">
+                                        <small>Gen-X Tech Pty Ltd</small>
+                                    </span>
+                                    <ul class="descriptions">
+                                        <li>
+                                            <span>Mainly focus on mobile app and web site frontend development.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="item item-detail">
+                                    <span class="title">Independent Developer and  Freelancer</span>
+                                    <span class="location">
+                                        <i>Shenzhen, China</i>
+                                    </span>
+                                    <span class="date">
+                                        <small>Mar. 2018 - April. 2020</small>
+                                    </span>
+                                    <ul class="descriptions">
+                                        <li>
+                                            <span>Developing mobile apps with Flutter, React Native and web apps with React.js etc.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="item item-detail">
+                                    <span class="title">Cofounder of FeiYing Studio, Fullstack developer, Tech Leader of the team</span>
+                                    <span class="location">
+                                        <i>Shenzhen, China</i>
+                                    </span>
+                                    <span class="date">
+                                        <small>Jan. 2013 - Fub. 2018</small>
+                                    </span>
+                                    <span class="organization">
+                                        <small>FeiYing Studio</small>
+                                    </span>
+                                    <ul class="descriptions">
+                                        <li>
+                                            <span>Lead a small team on developing mobile apps and games running on iOS and Android.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="item item-detail">
+                                    <span class="title">Senior Software Engineer</span>
+                                    <span class="location">
+                                        <i>Shenzhen, China</i>
+                                    </span>
+                                    <span class="date">
+                                        <small>Jan. 2011 - Dec. 2012</small>
+                                    </span>
+                                    <span class="organization">
+                                        <small>Woddon co ltd</small>
+                                    </span>
+                                    <ul class="descriptions">
+                                        <li>
+                                            <span>Lead software engineer focus on developing mobile apps for controling smart toys.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="item item-detail">
+                                    <span class="title">Intermediate Software Engineer</span>
+                                    <span class="location">
+                                        <i>Shenzhen, China</i>
+                                    </span>
+                                    <span class="date">
+                                        <small>Jul. 2009 - Dec. 2010</small>
+                                    </span>
+                                    <span class="organization">
+                                        <small>Shidean Legrand co ltd</small>
+                                    </span>
+                                    <ul class="descriptions">
+                                        <li>
+                                            <span>Software engineer focus on developing desktop and mobile apps for Smart Home System.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+                        <section id="skill-set" class="section">
+                            <h1 class="section-title">
+                                <em>Skill</em>
+                                <!-- react-text: 126 -->
+                                set
+                                <!-- /react-text -->
+                            </h1>
+                            <div class="items">
+                                <div class="item item-simple">
+                                    <span class="organization">Senior level experience with Flutter framework on developing mobile apps. (3+ years experience)</span>
+                                </div>
+                                <div class="item item-simple">
+                                    <span class="organization">Senior level experience with React.js related stack on developing web apps.(3+ years experience)</span>
+                                </div>
+                                <div class="item item-simple">
+                                    <span class="organization">Senior level of native Android and iOS mobile application development skills.(7+ years experience)</span>
+                                </div>
+                                <div class="item item-simple">
+                                    <span class="organization">Medium level experience with Node.js, Django, Gin on developing server side apps.</span>
+                                </div>
+                                <div class="item item-simple">
+                                    <span class="organization">Experience with web3.js, ethers.js, Solidity on developing blockchain related apps.</span>
+                                </div>
+                                <div class="item item-simple">
+                                    <span class="organization">Strong proficiency with computer programming foundamental knowledge and programming</span><br/>
+                                    <span>&nbsp languages(including C++, Java, Kotlin, Objective-C, Swift, JavaScript, Dart, Golang, Python etc).</span>
+                                </div>
+                                <div class="item item-simple">
+                                    <span class="organization">Be familiar with Cordova framework on developing hybrid mobile apps.</span>
+                                </div>
+                                <div class="item item-simple">
+                                    <span class="organization">Experience with UI design skills and design tools.</span>
+                                </div>
+                            </div>
+                        </section>
+                        <section id="product-showcase" class="section">
+                            <h1 class="section-title">
+                                <em>Some product</em>
+                                <!-- react-text: 126 -->
+                                showcases
+                                <!-- /react-text -->
+                            </h1>
+                            <div class="items">
+                                <div class="item item-simple">
+                                    <span class="organization"><a href="https://apps.apple.com/app/id1589727070" target="_blank">Gemsouls - An app to make friends with favorite vitual characters</a></span>
+                                </div>
+                                <div class="item item-simple">
+                                    <span class="organization"><a href="https://apps.apple.com/app/id1541603686" target="_blank">Panpan Chinese app - for online education</a></span>
+                                </div>
+                                <div class="item item-simple">
+                                    <span class="organization"><a href="https://www.teamlink.com.au" target="_blank">Teamlink system - for real estate management</a></span>
+                                </div>
+                                <div class="item item-simple">
+                                    <span class="organization"><a href="https://apps.apple.com/cn/app/共享学院/id1317657146" target="_blank">Share Acadamy - for learning community</a></span>
+                                </div>
+                                <div class="item item-simple">
+                                    <span class="organization"><a href="https://apps.apple.com/app/id1444394990" target="_blank">Reffles connect - for health care institution</a></span>
+                                </div>
+                                <div class="item item-simple">
+                                    <span class="organization"><a href="https://itunes.apple.com/cn/developer/feiyinginfo/id351050067" target="_blank">FeiYing Studio on App Store</a></span>
+                                </div>
+                            </div>
+                        </section>
+		       <section id="awards" class="section">
+                            <h1 class="section-title">
+                                <em>SOME RECENT PROJECT EXPERIENCE</em>
+                                <!-- react-text: 66 -->
+                                introduction
+                                <!-- /react-text -->
+                            </h1>
+                            <div class="items">
+                                <div class="item item-simple">
+                                    <span class="organization">1. Gemsouls: An app to make friends and chat with favorite vitual characters in metaverse world. Built with Flutter, building technical items including: Flutter, Google firebase, Django etc. Developed this app as a team member focus on mobile app and serverless backend development.</span>
+                                </div>
+                                <div class="item item-simple">
+                                    <span class="organization">2. Panpan Chinese app: An app for studying foreign language, providing functions such as registering, login, class reservation, learnig through realtime audio, payment etc. Built with Flutter, building technical items including: Flutter, Dart, Websocket, WebRTC, Swift, Retrofit, RxKotlin etc. Developed the mobile side of this app, and finished some part of the backend development with Koa.js.</span>
+                                </div>
+                                <div class="item item-simple">
+                                    <span class="organization">3. Teamlink app and web system: A system for real estate buying and selling, including mobile app and web system, providing functions such as finding estate through Google map, instant messaging between users, meeting office booking, estate listing management etc. Building technical items including: React.js, React Native, Koa.js etc. Developed mobile app, frontend and backend of this system with other colleagues in a team.</span>
+                                </div>
+                                <div class="item item-simple">
+                                    <span class="organization">4. Share Acadamy: An app for technical consult and online learning for metal smelting industry, providing functions such as professional material viewing and downloing, question asking and answering, expert reviewing and reservation etc. Built with Flutter, building technical items including: Flutter, Kotlin, Swift, Retrofit, RxKotlin, Dagger, Glide etc. Developed this app as a mobile app developer.</span>
+                                </div>
+                                <div class="item item-simple">
+                                    <span class="organization">5. Baoxian Chacha: An app for insurance query and purchasing, providing functions such as professional insurance kowledge query, insurance comparing etc. Built with flutter, building technical items including: Flutter, Objective-C, Java, Retrofit, Glide etc. Developed this app as mobile app developer with other members in a team.</span>
+                                </div>
+                            </div>
+                        </section>
+                        <section id="education" class="section">
+                            <h1 class="section-title">
+                                <em>Education </em>
+                                <!-- react-text: 126 -->
+                                background
+                                <!-- /react-text -->
+                            </h1>
+                            <div class="items">
+                                <div class="item item-simple">
+                                    <span class="date">2009</span>
+                                    <span class="organization">Bachelor degree of computer science network engineering from SCUT</span>
+                                    <span class="location">Guangzhou</span>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="disqus-wrapper">
+                        <div id="disqus_thread" class="disqus-comments"></div>
+                        <!-- react-empty: 155 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+<footer class="footer">
+<small class="copyright">
+    Created with
+<i class="fa fa-heart" aria-hidden="true"></i>
+    by Tony
+</small>
+</footer>
+</body>
 </html>
 
